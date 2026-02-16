@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathieu Berthier - Freelance Data / Analytics Engineer</title>
+    <meta name="description" content="Freelance Data & Analytics Engineer - Modern Data Stack de A à Z : ingestion, transformation, BI, CI/CD et gouvernance.">
+    <meta name="author" content="Mathieu Berthier">
+    <meta name="theme-color" content="#b820e6">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self'">
+    <link rel="canonical" href="https://mathieuberthier.com/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mathieu Berthier - Freelance Data / Analytics Engineer">
+    <meta property="og:description" content="Freelance Data & Analytics Engineer - Modern Data Stack de A à Z : ingestion, transformation, BI, CI/CD et gouvernance.">
+    <meta property="og:image" content="https://mathieuberthier.com/images/Mathieu_reseau_pro.jpg">
+    <meta property="og:image:alt" content="Mathieu Berthier - Freelance Data / Analytics Engineer">
+    <meta property="og:url" content="https://mathieuberthier.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mathieu Berthier",
+        "url": "https://mathieuberthier.com/",
+        "image": "https://mathieuberthier.com/images/Mathieu_reseau_pro.jpg",
+        "jobTitle": "Freelance Data / Analytics Engineer",
+        "description": "Freelance Data & Analytics Engineer - Modern Data Stack de A à Z : ingestion, transformation, BI, CI/CD et gouvernance.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Paris",
+            "addressRegion": "Île-de-France",
+            "addressCountry": "FR"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/mathieu-berthier-05aa1a28"
+        ],
+        "knowsAbout": ["Data Engineering", "Analytics Engineering", "dbt", "BigQuery", "Airbyte", "GCP", "Python", "SQL", "Data Governance", "Business Intelligence"]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Ovo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ========== Background decoration ========== -->
+    <div class="bg-decoration" aria-hidden="true"></div>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <a href="#top" class="nav-logo">MB</a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#top">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#experience">Parcours</a></li>
+            <li><a href="#usecases">Use Cases</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="#contact" class="nav-contact-btn">
+                Contact
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <ul>
+                <li><a href="#top">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Parcours</a></li>
+                <li><a href="#usecases">Use Cases</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+    <!-- ========== HERO / HEADER ========== -->
+    <header class="hero" id="top">
+        <div class="hero-content">
+            <img src="images/Mathieu_reseau_pro.jpg" alt="Mathieu Berthier" class="hero-photo" width="128" height="128">
+            <p class="hero-greeting">
+                Mathieu Berthier
+            </p>
+            <h1 class="hero-title">Freelance Data / Analytics Engineer</h1>
+            <p class="hero-subtitle">
+                Ingestion → Transformation → BI → Gouvernance. Votre stack data moderne, industrialisée de A à Z.
+            </p>
+            <p class="hero-location">Paris et périphérie</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    Me contacter
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    Découvrir mes services
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="section" id="services">
+        <h4 class="section-subtitle">Ce que je propose</h4>
+        <h2 class="section-title">Services</h2>
+        <p class="section-description">
+            +8 ans d'expérience en data engineering, analytics et plateformes cloud. Expert dbt et stack data moderne, j'accompagne les équipes de la collecte à la restitution des données.
+        </p>
+
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                        <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+                        <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+                    </svg>
+                </div>
+                <h3 class="service-name">Modern Data Stack (End-to-end)</h3>
+                <p class="service-desc">Ingestion des données (Airbyte, connecteurs custom Python), Data Warehouse (BigQuery), transformation (dbt Core & Cloud), restitution BI (Looker Studio, Power BI, Preset). Mise en place d'analytics self-service pour les équipes internes.</p>
+                <ul class="service-tags">
+                    <li>Airbyte</li>
+                    <li>BigQuery</li>
+                    <li>dbt</li>
+                    <li>Looker Studio</li>
+                    <li>Power BI</li>
+                </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/>
+                        <path d="m15 5 3 3"/>
+                    </svg>
+                </div>
+                <h3 class="service-name">Industrialisation & CI/CD</h3>
+                <p class="service-desc">Mise en place d'environnements (dev/staging/prod), tests automatisés, déploiement continu via Cloud Functions & Cloud Scheduler. Conventions de nommage, bundles de déploiement et documentation technique.</p>
+                <ul class="service-tags">
+                    <li>Git</li>
+                    <li>CI/CD</li>
+                    <li>Tests</li>
+                    <li>Cloud Functions</li>
+                    <li>Scheduler</li>
+                </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                        <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                </div>
+                <h3 class="service-name">Data Quality & Gouvernance</h3>
+                <p class="service-desc">Définition de l'ownership des données en collaboration avec les data owners, documentation des KPIs, mise en place d'un catalogue de données, animation de la communauté data et monitoring qualité.</p>
+                <ul class="service-tags">
+                    <li>Data Quality</li>
+                    <li>KPI</li>
+                    <li>Collibra</li>
+                    <li>Documentation</li>
+                    <li>Ownership</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tools -->
+        <h4 class="tools-title">Technologies & outils</h4>
+        <div class="tools-grid">
+            <div class="tool-item" title="dbt">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF694B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+                <span>dbt</span>
+            </div>
+            <div class="tool-item" title="BigQuery">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+                <span>BQ</span>
+            </div>
+            <div class="tool-item" title="Airbyte">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#615EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 23-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                <span>Airbyte</span>
+            </div>
+            <div class="tool-item" title="GCP">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+                <span>GCP</span>
+            </div>
+            <div class="tool-item" title="Python">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3776AB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                <span>Python</span>
+            </div>
+            <div class="tool-item" title="SQL">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#336791" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                <span>SQL</span>
+            </div>
+            <div class="tool-item" title="Git">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F05032" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+                <span>Git</span>
+            </div>
+            <div class="tool-item" title="Looker Studio">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                <span>Looker</span>
+            </div>
+            <div class="tool-item" title="Power BI">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4A017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                <span>Power BI</span>
+            </div>
+            <div class="tool-item" title="Tableau">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E97627" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <span>Tableau</span>
+            </div>
+            <div class="tool-item" title="Dataiku">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2AB1AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                <span>Dataiku</span>
+            </div>
+            <div class="tool-item" title="Spark">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E25A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>Spark</span>
+            </div>
+            <div class="tool-item" title="Preset">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#20A7C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+                <span>Preset</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section class="section" id="experience">
+        <h4 class="section-subtitle">Mon parcours</h4>
+        <h2 class="section-title">Expériences</h2>
+        <p class="section-description">
+            Un parcours de +7 ans en data engineering et analytics, complété par +10 ans d'expertise en marketing digital.
+        </p>
+
+        <div class="experience-grid">
+            <!-- Eurofiber -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-company">Eurofiber France</h3>
+                        <p class="exp-role">Analytics Engineer</p>
+                    </div>
+                    <span class="exp-date">2025 - Présent</span>
+                </div>
+                <p class="exp-desc">Conception de la couche de transformation dbt Cloud sur BigQuery, supervision de l'ingestion Airbyte, dashboards Power BI, gouvernance des données.</p>
+                <p class="exp-impact">Fiabilisation des données réseau et gain de visibilité via des KPIs fiabilisés.</p>
+                <div class="exp-tags">
+                    <span>dbt Cloud</span>
+                    <span>BigQuery</span>
+                    <span>Airbyte</span>
+                    <span>Power BI</span>
+                </div>
+            </div>
+
+            <!-- AXA -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-company">AXA France</h3>
+                        <p class="exp-role">Data Management Specialist</p>
+                    </div>
+                    <span class="exp-date">2024 - 2025</span>
+                </div>
+                <p class="exp-desc">Stratégie de gouvernance data, cartographie et documentation des données clés via Collibra, valorisation des cas d'usage Data & IA.</p>
+                <p class="exp-impact">Montée en qualité du patrimoine data legacy et maîtrise de la gouvernance.</p>
+                <div class="exp-tags">
+                    <span>Gouvernance</span>
+                    <span>Collibra</span>
+                    <span>Data Quality</span>
+                </div>
+            </div>
+
+            <!-- Botify -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-company">Botify</h3>
+                        <p class="exp-role">Data Engineer</p>
+                    </div>
+                    <span class="exp-date">2022 - 2024</span>
+                </div>
+                <p class="exp-desc">Data Warehouse BigQuery, pipelines dbt Core & Cloud, intégration Airbyte, dashboards Looker Studio & Preset, data quality monitoring.</p>
+                <p class="exp-impact">Autonomie des utilisateurs métiers, fiabilisation des insights et gain de temps analytics.</p>
+                <div class="exp-tags">
+                    <span>dbt</span>
+                    <span>BigQuery</span>
+                    <span>Airbyte</span>
+                    <span>Looker Studio</span>
+                </div>
+            </div>
+
+            <!-- Keyrus -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-company">Keyrus · La Banque Postale Assurances</h3>
+                        <p class="exp-role">Data Engineer</p>
+                    </div>
+                    <span class="exp-date">2019 - 2021</span>
+                </div>
+                <p class="exp-desc">Data Warehouses vision 360°, pipelines Spark (Scala, PySpark), workflows Dataiku DSS, documentation et bonnes pratiques.</p>
+                <p class="exp-impact">Réduction des silos data marketing et amélioration de la qualité des données.</p>
+                <div class="exp-tags">
+                    <span>Spark</span>
+                    <span>Dataiku</span>
+                    <span>PySpark</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+
+            <!-- Solocal / Pages Jaunes -->
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-company">Solocal Group (Pages Jaunes)</h3>
+                        <p class="exp-role">Data Analyst</p>
+                    </div>
+                    <span class="exp-date">2017 - 2018</span>
+                </div>
+                <p class="exp-desc">Analyse des performances SEO du site Pages Jaunes (trafic, structure, ranking, engagement). Gestion des bases de données SEO sur Hadoop, dashboards Tableau, scraping & nettoyage de données web.</p>
+                <p class="exp-impact">Mise à disposition rapide de KPIs pour les chefs de projet et appui aux décisions d'optimisation.</p>
+                <div class="exp-tags">
+                    <span>Hadoop</span>
+                    <span>Tableau</span>
+                    <span>SQL</span>
+                    <span>Scraping</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== USE CASES ========== -->
+    <section class="section" id="usecases">
+        <h4 class="section-subtitle">Mes réalisations</h4>
+        <h2 class="section-title">Use Cases</h2>
+        <p class="section-description">
+            Découvrez quelques exemples concrets de projets data menés de bout en bout.
+        </p>
+
+        <div class="usecases-grid">
+            <!-- Use Case 1 -->
+            <div class="usecase-card">
+                <div class="usecase-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <div class="usecase-overlay">
+                        <div class="usecase-info">
+                            <h3>Industrialisation dbt</h3>
+                            <p>dbt · BigQuery · CI/CD</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="usecase-content">
+                    <h3>Industrialisation dbt de A à Z</h3>
+                    <p>Déploiement complet de dbt pour une équipe data analytics SaaS : sources, modèles, orchestration des jobs, tests automatisés et documentation. Onboarding et installation sur les postes des développeurs. Résultat : données fiabilisées et équipe 100 % autonome sur la chaîne de transformation.</p>
+                </div>
+            </div>
+
+            <!-- Use Case 2 -->
+            <div class="usecase-card">
+                <div class="usecase-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <div class="usecase-overlay">
+                        <div class="usecase-info">
+                            <h3>Self-Service Analytics</h3>
+                            <p>dbt · BigQuery · Superset</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="usecase-content">
+                    <h3>Plateforme Self-Service Analytics</h3>
+                    <p>Déploiement d'une plateforme d'analytics en libre-service (dbt, BigQuery, Superset) pour autonomiser les équipes métiers. 30 utilisateurs actifs en 3 mois, identification plus rapide des opportunités business.</p>
+                </div>
+            </div>
+
+            <!-- Use Case 3 -->
+            <div class="usecase-card">
+                <div class="usecase-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <div class="usecase-overlay">
+                        <div class="usecase-info">
+                            <h3>Migration Big Data</h3>
+                            <p>Spark · Hadoop</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="usecase-content">
+                    <h3>Migration & Modernisation Big Data</h3>
+                    <p>Migration d'un SI legacy (SAS) vers une stack Big Data (Spark Scala, Hadoop). Dashboards quotidiens déployés dans 3 directions (finance, marketing, produit) et fin des extractions manuelles.</p>
+                </div>
+            </div>
+
+            <!-- Use Case 4 -->
+            <div class="usecase-card">
+                <div class="usecase-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="usecase-overlay">
+                        <div class="usecase-info">
+                            <h3>DWH Marketing</h3>
+                            <p>Dataiku · PySpark</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="usecase-content">
+                    <h3>Data Warehouse Marketing Big Data</h3>
+                    <p>Construction d'un DWH marketing sur Hadoop avec Dataiku (PySpark & Spark SQL) en remplacement d'un système SAS. Données clients consolidées, mises à jour quotidiennes et analyses internes accélérées.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section section-contact" id="contact">
+        <h4 class="section-subtitle">Travaillons ensemble</h4>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-description">
+            Un projet data en tête ? Discutons-en. Je suis disponible pour des missions freelance, du conseil ou un simple échange.
+        </p>
+
+        <div class="contact-cta">
+            <a href="https://www.linkedin.com/in/mathieu-berthier-05aa1a28" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-linkedin">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                Me contacter sur LinkedIn
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+            </a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mathieu Berthier. Tous droits réservés.</p>
+            <ul class="footer-links">
+                <li><a href="https://www.linkedin.com/in/mathieu-berthier-05aa1a28" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            'use strict';
+
+            // Navbar scroll effect (throttled via rAF)
+            var navbar = document.getElementById('navbar');
+            var navLinks = document.getElementById('navLinks');
+            var ticking = false;
+
+            navLinks.classList.add('nav-links-pill');
+
+            function onScroll() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                    navLinks.classList.remove('nav-links-pill');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                    navLinks.classList.add('nav-links-pill');
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(onScroll);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // Mobile menu
+            var menuToggle = document.getElementById('menuToggle');
+            var mobileMenu = document.getElementById('mobileMenu');
+            var mobileMenuClose = document.getElementById('mobileMenuClose');
+
+            menuToggle.addEventListener('click', function () {
+                mobileMenu.classList.add('open');
+            });
+
+            mobileMenuClose.addEventListener('click', function () {
+                mobileMenu.classList.remove('open');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.remove('open');
+                });
+            });
+
+            // Scroll reveal animation
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.service-card, .experience-card, .usecase-card').forEach(function (el) {
+                el.classList.add('reveal');
+                observer.observe(el);
+            });
+        })();
+    </script>
+
+</body>
+</html>

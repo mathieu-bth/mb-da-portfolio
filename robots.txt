@@ -1,0 +1,55 @@
+User-agent: *
+Allow: /
+
+# Block Grok / xAI
+User-agent: GrokBot
+Disallow: /
+
+User-agent: xAI-Grok
+Disallow: /
+
+User-agent: Grok-DeepSearch
+Disallow: /
+
+# Block minor / useless AI bots
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+# Block SEO scrapers / spam bots
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+Sitemap: https://mathieuberthier.com/sitemap.xml
