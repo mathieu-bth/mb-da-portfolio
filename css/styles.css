@@ -66,7 +66,7 @@ img {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem 1.25rem;
     z-index: 100;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -76,15 +76,6 @@ img {
 .navbar-scrolled {
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
-}
-
-.nav-logo {
-    font-family: 'Ovo', serif;
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    color: #1a1a1a;
-    margin-right: 2rem;
 }
 
 .nav-links {
@@ -115,22 +106,6 @@ img {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.nav-contact-btn {
-    display: none;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.375rem 2rem;
-    border: 1px solid #d1d5db;
-    border-radius: 9999px;
-    font-family: 'Ovo', serif;
-    font-size: 0.9rem;
-    transition: background 0.3s;
-}
-
-.nav-contact-btn:hover {
-    background: rgba(241, 245, 249, 0.7);
 }
 
 /* Hamburger */
@@ -544,7 +519,7 @@ img {
 
 .usecase-image {
     position: relative;
-    aspect-ratio: 5 / 2;
+    aspect-ratio: 4 / 1;
     cursor: pointer;
     overflow: hidden;
 }
@@ -729,10 +704,6 @@ img {
 
     .nav-links {
         gap: 2rem;
-    }
-
-    .nav-contact-btn {
-        display: inline-flex;
     }
 
     .section {
