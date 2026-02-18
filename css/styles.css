@@ -519,7 +519,7 @@ img {
 
 .usecase-image {
     position: relative;
-    aspect-ratio: 4 / 1;
+    aspect-ratio: 3 / 1;
     cursor: pointer;
     overflow: hidden;
 }
@@ -539,9 +539,6 @@ img {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.usecase-card:hover .usecase-overlay {
-    transform: translate(-50%, 0) translateY(-1.25rem);
-}
 
 .usecase-info h3 {
     font-size: 0.9rem;
