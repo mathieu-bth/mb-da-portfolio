@@ -731,6 +731,116 @@ img {
     }
 }
 
+/* ---------- CONSENT BANNER ---------- */
+.consent-banner {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(100% + 2rem));
+    width: calc(100% - 2rem);
+    max-width: 760px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    z-index: 9999;
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.5s ease;
+}
+
+.consent-banner.visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.consent-banner.hiding {
+    transform: translateX(-50%) translateY(calc(100% + 2rem));
+    opacity: 0;
+}
+
+.consent-text {
+    font-size: 0.85rem;
+    color: #4b5563;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.consent-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.btn-consent-deny {
+    background: none;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: color 0.2s, background 0.2s;
+}
+
+.btn-consent-deny:hover {
+    color: #1a1a1a;
+    background: #f3f4f6;
+}
+
+.btn-consent-accept {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #b820e6 0%, #da7d20 100%);
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-consent-accept:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+    .consent-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+        transform: translateY(calc(100% + 2rem));
+    }
+
+    .consent-banner.visible {
+        transform: translateY(0);
+    }
+
+    .consent-banner.hiding {
+        transform: translateY(calc(100% + 2rem));
+    }
+
+    .consent-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
     html {

@@ -45,8 +45,14 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage:  'denied',
+        ad_storage:         'denied',
+        ad_user_data:       'denied',
+        ad_personalization: 'denied',
+        wait_for_update:    500
+      });
       gtag('js', new Date());
-
       gtag('config', 'G-Q8XF270962');
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -454,9 +460,53 @@
         </div>
     </footer>
 
+    <!-- ========== CONSENT BANNER ========== -->
+    <div class="consent-banner" id="consentBanner" role="dialog" aria-label="Consentement au suivi" aria-live="polite">
+        <p class="consent-text">Ce site utilise Google Analytics pour mesurer son audience. Acceptez-vous le dépôt de cookies analytiques ?</p>
+        <div class="consent-actions">
+            <button class="btn-consent-deny" id="consentDeny">Refuser</button>
+            <button class="btn-consent-accept" id="consentAccept">Accepter</button>
+        </div>
+    </div>
+
     <script>
         (function () {
             'use strict';
+
+            // Consent banner
+            var consentBanner = document.getElementById('consentBanner');
+            var storedConsent = localStorage.getItem('cookie_consent');
+
+            if (storedConsent === 'granted') {
+                gtag('consent', 'update', {
+                    analytics_storage:  'granted',
+                    ad_storage:         'denied',
+                    ad_user_data:       'denied',
+                    ad_personalization: 'denied'
+                });
+            } else if (!storedConsent) {
+                setTimeout(function () {
+                    consentBanner.classList.add('visible');
+                }, 800);
+            }
+
+            document.getElementById('consentAccept').addEventListener('click', function () {
+                localStorage.setItem('cookie_consent', 'granted');
+                gtag('consent', 'update', {
+                    analytics_storage:  'granted',
+                    ad_storage:         'denied',
+                    ad_user_data:       'denied',
+                    ad_personalization: 'denied'
+                });
+                consentBanner.classList.remove('visible');
+                consentBanner.classList.add('hiding');
+            });
+
+            document.getElementById('consentDeny').addEventListener('click', function () {
+                localStorage.setItem('cookie_consent', 'denied');
+                consentBanner.classList.remove('visible');
+                consentBanner.classList.add('hiding');
+            });
 
             // Navbar scroll effect (throttled via rAF)
             var navbar = document.getElementById('navbar');
