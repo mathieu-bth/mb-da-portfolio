@@ -5,6 +5,15 @@
     var consentBanner = document.getElementById('consentBanner');
     var storedConsent = localStorage.getItem('cookie_consent');
 
+    function hideBanner() {
+        consentBanner.classList.remove('visible');
+        consentBanner.classList.add('hiding');
+        consentBanner.addEventListener('transitionend', function onEnd() {
+            consentBanner.removeEventListener('transitionend', onEnd);
+            consentBanner.style.display = 'none';
+        });
+    }
+
     if (storedConsent === 'granted') {
         gtag('consent', 'update', {
             analytics_storage:  'granted',
@@ -12,7 +21,10 @@
             ad_user_data:       'denied',
             ad_personalization: 'denied'
         });
-    } else if (!storedConsent) {
+        consentBanner.style.display = 'none';
+    } else if (storedConsent === 'denied') {
+        consentBanner.style.display = 'none';
+    } else {
         setTimeout(function () {
             consentBanner.classList.add('visible');
         }, 800);
@@ -26,14 +38,12 @@
             ad_user_data:       'denied',
             ad_personalization: 'denied'
         });
-        consentBanner.classList.remove('visible');
-        consentBanner.classList.add('hiding');
+        hideBanner();
     });
 
     document.getElementById('consentDeny').addEventListener('click', function () {
         localStorage.setItem('cookie_consent', 'denied');
-        consentBanner.classList.remove('visible');
-        consentBanner.classList.add('hiding');
+        hideBanner();
     });
 
     // Navbar scroll effect (throttled via rAF)
