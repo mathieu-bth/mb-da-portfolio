@@ -841,6 +841,46 @@ img {
     }
 }
 
+/* ---------- Language Switch ---------- */
+.lang-switch {
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.78rem;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    color: #374151;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    padding: 0.3rem 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: background 0.2s, color 0.2s;
+    z-index: 101;
+    white-space: nowrap;
+}
+
+.lang-switch:hover {
+    background: #f3f4f6;
+    color: #7c3aed;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+    .lang-switch { right: 2rem; }
+}
+
+@media (min-width: 1024px) {
+    .lang-switch { right: 2.5rem; }
+}
+
+@media (min-width: 1280px) {
+    .lang-switch { right: 8%; }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
     html {
