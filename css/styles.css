@@ -50,7 +50,6 @@ img {
     background: radial-gradient(ellipse at 70% 20%, rgba(184, 32, 230, 0.08) 0%, rgba(218, 125, 32, 0.05) 40%, transparent 70%);
     z-index: -1;
     pointer-events: none;
-    transform: translateZ(0);
 }
 
 /* ---------- Utility ---------- */
@@ -70,7 +69,6 @@ img {
     padding: 1rem 1.25rem;
     z-index: 100;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    transform: translateZ(0);
 }
 
 .navbar-scrolled {
@@ -141,7 +139,6 @@ img {
     transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
-    will-change: transform;
 }
 
 .mobile-menu.open {
@@ -522,6 +519,7 @@ img {
     aspect-ratio: 3 / 1;
     cursor: pointer;
     overflow: hidden;
+    isolation: isolate;
 }
 
 .usecase-overlay {
@@ -740,8 +738,6 @@ img {
     width: calc(100% - 2rem);
     max-width: 760px;
     background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border: 1px solid #e5e7eb;
     border-radius: 1rem;
     padding: 1rem 1.25rem;
@@ -759,6 +755,8 @@ img {
 .consent-banner.visible {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .consent-banner.hiding {
@@ -851,8 +849,10 @@ img {
 .lang-switch {
     position: absolute;
     right: 1.25rem;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: fit-content;
     font-size: 0.78rem;
     font-weight: 600;
     font-family: 'Outfit', sans-serif;
@@ -872,7 +872,6 @@ img {
 .lang-switch:hover {
     background: #f3f4f6;
     color: #7c3aed;
-    transform: translateY(-50%);
 }
 
 @media (min-width: 768px) {
