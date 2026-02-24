@@ -7,7 +7,7 @@
     <meta name="description" content="Freelance Data & Analytics Engineer - Modern Data Stack end-to-end: ingestion, transformation, BI, CI/CD and governance.">
     <meta name="author" content="Mathieu Berthier">
     <meta name="theme-color" content="#b820e6">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://www.googletagmanager.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
     <link rel="canonical" href="https://mathieuberthier.com/en/">
     <link rel="alternate" hreflang="fr" href="https://mathieuberthier.com/">
     <link rel="alternate" hreflang="en" href="https://mathieuberthier.com/en/">
@@ -43,20 +43,8 @@
     }
     </script>
     <!-- Google tag (gtag.js) -->
+    <script src="../js/gtm-init.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8XF270962"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('consent', 'default', {
-        analytics_storage:  'denied',
-        ad_storage:         'denied',
-        ad_user_data:       'denied',
-        ad_personalization: 'denied',
-        wait_for_update:    500
-      });
-      gtag('js', new Date());
-      gtag('config', 'G-Q8XF270962');
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Ovo&display=swap" rel="stylesheet">
@@ -373,7 +361,7 @@
         <div class="usecases-grid">
             <!-- Use Case 1 -->
             <div class="usecase-card">
-                <div class="usecase-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <div class="usecase-image uc-gradient-1">
                     <div class="usecase-overlay">
                         <div class="usecase-info">
                             <h3>dbt Industrialization</h3>
@@ -389,7 +377,7 @@
 
             <!-- Use Case 2 -->
             <div class="usecase-card">
-                <div class="usecase-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <div class="usecase-image uc-gradient-2">
                     <div class="usecase-overlay">
                         <div class="usecase-info">
                             <h3>Self-Service Analytics</h3>
@@ -405,7 +393,7 @@
 
             <!-- Use Case 3 -->
             <div class="usecase-card">
-                <div class="usecase-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                <div class="usecase-image uc-gradient-3">
                     <div class="usecase-overlay">
                         <div class="usecase-info">
                             <h3>Big Data Migration</h3>
@@ -421,7 +409,7 @@
 
             <!-- Use Case 4 -->
             <div class="usecase-card">
-                <div class="usecase-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <div class="usecase-image uc-gradient-4">
                     <div class="usecase-overlay">
                         <div class="usecase-info">
                             <h3>Marketing DWH</h3>
@@ -462,7 +450,7 @@
             <p>&copy; 2026 Mathieu Berthier. All rights reserved.</p>
             <ul class="footer-links">
                 <li><a href="https://www.linkedin.com/in/mathieu-berthier-05aa1a28" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://github.com/mathieu-bth" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
         </div>
     </footer>
@@ -476,105 +464,7 @@
         </div>
     </div>
 
-    <script>
-        (function () {
-            'use strict';
-
-            // Consent banner
-            var consentBanner = document.getElementById('consentBanner');
-            var storedConsent = localStorage.getItem('cookie_consent');
-
-            if (storedConsent === 'granted') {
-                gtag('consent', 'update', {
-                    analytics_storage:  'granted',
-                    ad_storage:         'denied',
-                    ad_user_data:       'denied',
-                    ad_personalization: 'denied'
-                });
-            } else if (!storedConsent) {
-                setTimeout(function () {
-                    consentBanner.classList.add('visible');
-                }, 800);
-            }
-
-            document.getElementById('consentAccept').addEventListener('click', function () {
-                localStorage.setItem('cookie_consent', 'granted');
-                gtag('consent', 'update', {
-                    analytics_storage:  'granted',
-                    ad_storage:         'denied',
-                    ad_user_data:       'denied',
-                    ad_personalization: 'denied'
-                });
-                consentBanner.classList.remove('visible');
-                consentBanner.classList.add('hiding');
-            });
-
-            document.getElementById('consentDeny').addEventListener('click', function () {
-                localStorage.setItem('cookie_consent', 'denied');
-                consentBanner.classList.remove('visible');
-                consentBanner.classList.add('hiding');
-            });
-
-            // Navbar scroll effect (throttled via rAF)
-            var navbar = document.getElementById('navbar');
-            var navLinks = document.getElementById('navLinks');
-            var ticking = false;
-
-            navLinks.classList.add('nav-links-pill');
-
-            function onScroll() {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('navbar-scrolled');
-                    navLinks.classList.remove('nav-links-pill');
-                } else {
-                    navbar.classList.remove('navbar-scrolled');
-                    navLinks.classList.add('nav-links-pill');
-                }
-                ticking = false;
-            }
-
-            window.addEventListener('scroll', function () {
-                if (!ticking) {
-                    requestAnimationFrame(onScroll);
-                    ticking = true;
-                }
-            }, { passive: true });
-
-            // Mobile menu
-            var menuToggle = document.getElementById('menuToggle');
-            var mobileMenu = document.getElementById('mobileMenu');
-            var mobileMenuClose = document.getElementById('mobileMenuClose');
-
-            menuToggle.addEventListener('click', function () {
-                mobileMenu.classList.add('open');
-            });
-
-            mobileMenuClose.addEventListener('click', function () {
-                mobileMenu.classList.remove('open');
-            });
-
-            mobileMenu.querySelectorAll('a').forEach(function (link) {
-                link.addEventListener('click', function () {
-                    mobileMenu.classList.remove('open');
-                });
-            });
-
-            // Scroll reveal animation
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('revealed');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-            document.querySelectorAll('.service-card, .experience-card, .usecase-card').forEach(function (el) {
-                el.classList.add('reveal');
-                observer.observe(el);
-            });
-        })();
-    </script>
+    <script src="../js/main.js" defer></script>
 
 </body>
 </html>
