@@ -1,5 +1,3 @@
-# mathieuberthier.com
-
 Personal portfolio website — Freelance Data & Analytics Engineer.
 
 ## Stack
